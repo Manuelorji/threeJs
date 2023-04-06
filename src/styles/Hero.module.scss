@@ -1,0 +1,11 @@
+.heroimg {
+  position: absolute;
+  top: 20%;
+  animation: bounce infinite 2s alternate ease;
+}
+
+@keyframes bounce {
+  100% {
+    transform: translateY(20px);
+  }
+}

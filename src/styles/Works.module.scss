@@ -1,0 +1,45 @@
+.works {
+  -webkit-text-stroke: 1px #fff;
+  font-weight: bold;
+  color: transparent;
+  cursor: pointer;
+  font-size: 60px;
+  position: relative;
+
+  &::after {
+    // content: "";
+    position: absolute;
+    color: rgb(209, 171, 209);
+    top: 0;
+    left: 0;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+
+    &:hover {
+      &::after {
+        animation: moveText 0.5s linear;
+
+        @keyframes moveText {
+          to {
+            width: 100px;
+            color: rgb(209, 171, 209);
+          }
+        }
+      }
+    }
+  }
+}
+
+.works:hover {
+  @apply text-orange-300;
+}
+
+.currentWork {
+  -webkit-text-stroke: 1px #fff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 60px;
+  position: relative;
+  @apply text-orange-300;
+}
